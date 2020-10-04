@@ -5,7 +5,7 @@
 
 const accessingAnItem = () => {
   const cars = ["BMW", "Honda", "Civic"]; // Do not change this line
-  // Write code here
+  return cars[0];// Write code here
 };
 
 /**
@@ -16,10 +16,10 @@ const accessingAnItem = () => {
 
 const addToAnArray = () => {
   const languages = ["JavaScript"]; // Do not change this line
-
+const newLanguages = [...languages, "Python", "Java", "PHP"];
   /* Add three more items to the "languages" array here */
 
-  return languages;
+  return newLanguages;
 };
 
 /**
@@ -30,7 +30,9 @@ const addToAnArray = () => {
  * @example combineArray(['Japan','China','India'], ['USA','UK']) // ['Japan','China','India','USA','UK']
  **/
 
-const combineArray = (array1, array2) => {};
+const combineArray = (array1, array2) => {
+  return newArray = [...array1,...array2];
+};
 
 /***
  * Create an array that contain two functions:
@@ -42,7 +44,9 @@ const combineArray = (array1, array2) => {};
  * @example createArrayOfFunctions()[1](10, 10) // 0;
  */
 
-const createArrayOfFunctions = () => {};
+const createArrayOfFunctions = () => {
+
+};
 
 /**
  * Loop through the array using a for loop (or for ... of loop) and return the highest number
@@ -93,6 +97,7 @@ const highestNumber = (numbers) => {};
 
 const findAndAbort = (arr, id) => {};
 
+
 /**
  * Check to see if a string is a palindrome.
  * A palindrome is a word, phrase, or sequence that reads the same backward as forward, e.g., madam or racecar.
@@ -115,7 +120,9 @@ const isPalindrome = (str) => {};
  * removeDuplicates(); // [2, 3, 4, 5, 6, 7, 32]
  */
 
-const removeDuplicates = (numbers) => {};
+const removeDuplicates = (numbers) => {
+  return [...new Set(numbers)];
+};
 
 /**
  * Make an object "myDog" that represents a dog. It should contain the properties:
@@ -125,7 +132,15 @@ const removeDuplicates = (numbers) => {};
  * @return {object}
  */
 
-const createDogObject = () => {};
+const createDogObject = () => {
+  const myDog = {
+  name: "Doggo",
+  legs: 4,
+  tails: 1,
+  owners: ["owner1", "owner2", "owner3"]
+};
+return myDog;
+};
 
 /**
  * Return the value for hat inside of the clothes object
@@ -140,7 +155,7 @@ const accessAnItemObject = () => {
     shirt: "jersey",
     shoes: "cleats",
   };
-  // Write code here
+  return clothes.hat;// Write code here
 };
 
 /**
@@ -162,7 +177,10 @@ const updateStudentObject = () => {
     lastName: "",
     skills: [],
   };
-  // Write code here
+ student.firstName = "studentname";
+ student.lastName = "studentlastname";
+ student.skills = ["skill1", "skill2", "skill3"];
+ return student; // Write code here
 };
 
 /**
@@ -179,7 +197,8 @@ const returnObjectValues = () => {
     owner: "Stacy",
     name: "Rocket",
   };
-  // Add code here
+  const properties = Object.values(dog);
+  return properties;// Add code here
   // HINT: you need to return an array
 };
 
@@ -194,7 +213,11 @@ const returnObjectValues = () => {
  * combineObject(obj1, obj2); // { firstName: "Clark", lastName: "Kent" }
  */
 
-const combineObject = (obj1, obj2) => {};
+const combineObject = (obj1, obj2) => {
+ 
+  let combineObject = Object.assign(obj1, obj2);
+  return combineObject;
+};
 
 module.exports = {
   addToAnArray,
